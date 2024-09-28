@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://www.ibm.com/mdm/port/Party" xmlns:sch="http://www.ibm.com/mdm/schema">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-4865046939551">
+            <wsse:Username>mdmadmin</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">mdmadmin</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <par:addParty>
+         <sch:RequestControl>
+            <sch:requestID>100001</sch:requestID>
+            <sch:DWLControl>
+               <sch:requesterName>TEST</sch:requesterName>
+               <sch:requesterLanguage>100</sch:requesterLanguage>
+            </sch:DWLControl>
+         </sch:RequestControl>
+         <!--You have a CHOICE of the next 3 items at this level-->
+            <sch:TCRMPersonBObj>
+               <sch:PartyType>P</sch:PartyType>
+               <sch:ClientStatusType>1</sch:ClientStatusType>
+               <sch:TCRMPartyAddressBObj>
+                  <sch:AddressUsageType>1</sch:AddressUsageType>
+                  <sch:TCRMAddressBObj>
+                     <sch:AddressLineOne>Aliquam St.</sch:AddressLineOne>
+                     <sch:City>Iowa City</sch:City>
+                     <sch:ZipPostalCode>10218</sch:ZipPostalCode>
+                     <sch:ResidenceNumber>2378</sch:ResidenceNumber>
+                     <sch:ProvinceStateType>41</sch:ProvinceStateType>
+                     <sch:CountryType>124</sch:CountryType>
+                  </sch:TCRMAddressBObj>
+               </sch:TCRMPartyAddressBObj>
+               <sch:TCRMPartyContactMethodBObj>
+                  <sch:ContactMethodUsageType>1</sch:ContactMethodUsageType>
+                  <!--<sch:ContactMethodUsageValue></sch:ContactMethodUsageValue>-->
+                  <sch:TCRMContactMethodBObj>
+                     <sch:ReferenceNumber>1-860-949-9624</sch:ReferenceNumber>
+                     <sch:ContactMethodType>1</sch:ContactMethodType>
+                     <!--<sch:ContactMethodValue></sch:ContactMethodValue>-->
+                  </sch:TCRMContactMethodBObj>
+               </sch:TCRMPartyContactMethodBObj>
+               <sch:TCRMPartyContactMethodBObj>
+                  <sch:ContactMethodUsageType>6</sch:ContactMethodUsageType>
+                  <!--<sch:ContactMethodUsageValue></sch:ContactMethodUsageValue>-->
+                  <sch:TCRMContactMethodBObj>
+                     <sch:ReferenceNumber>enim.nisl@imperdietornare.ca</sch:ReferenceNumber>
+                     <sch:ContactMethodType>2</sch:ContactMethodType>
+                     <!--<sch:ContactMethodValue></sch:ContactMethodValue>-->
+                  </sch:TCRMContactMethodBObj>
+               </sch:TCRMPartyContactMethodBObj>
+               <sch:TCRMAdminContEquivBObj>
+                  <sch:AdminPartyId>100100</sch:AdminPartyId>
+                  <sch:AdminSystemType>1</sch:AdminSystemType>
+                  <!--<sch:AdminSystemValue></sch:AdminSystemValue>-->
+               </sch:TCRMAdminContEquivBObj>
+               <sch:TCRMPersonNameBObj>
+                  <sch:GenerationType>1</sch:GenerationType>
+                  <sch:NameUsageType>1</sch:NameUsageType>
+                  <sch:PrefixType>1</sch:PrefixType>
+                  <!--<sch:PrefixValue></sch:PrefixValue>-->
+                  <sch:GivenNameOne>bithle</sch:GivenNameOne>
+                  <sch:GivenNameTwo>bynam</sch:GivenNameTwo>
+                  <sch:LastName>SUCCESS</sch:LastName>
+                  <sch:Suffix>CNM</sch:Suffix>
+                  <!--<sch:SourceIdentifierValue></sch:SourceIdentifierValue>-->
+               </sch:TCRMPersonNameBObj>
+            </sch:TCRMPersonBObj>
+      </par:addParty>
+   </soapenv:Body>
+</soapenv:Envelope>
